@@ -57,7 +57,7 @@ Now, when you load the admin page for the ``Choice`` model, the count for pagina
 License
 -------
 
-Copyright © 2013, Educreations, Inc under the `MIT <LICENSE>`_.
+Copyright © 2013, Educreations, Inc under the MIT LICENSE.
 
 
 .. _`counting all rows`: http://www.mysqlperformanceblog.com/2006/12/01/count-for-innodb-tables/
