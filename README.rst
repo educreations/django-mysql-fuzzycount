@@ -54,6 +54,12 @@ Another common issue is counts in the admin for a model. There is a base ``Model
 Now, when you load the admin page for the ``Choice`` model, the count for pagination will be approximate.
 
 
+Testing
+-------
+
+It has been tested in production, but there are no unit or integration tests.
+
+
 License
 -------
 
