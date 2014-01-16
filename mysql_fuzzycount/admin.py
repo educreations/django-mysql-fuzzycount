@@ -3,8 +3,12 @@ from django.contrib import admin
 from mysql_fuzzycount.queryset import FuzzyCountQuerySet
 
 
-class FuzzyCountModelAdmin(admin.ModelAdmin):
+class FuzzyCountModelAdminMixin(object):
 
     def queryset(self, request):
-        qs = super(FuzzyCountModelAdmin, self).queryset(request)
+        qs = super(FuzzyCountModelAdminMixin, self).queryset(request)
         return qs._clone(klass=FuzzyCountQuerySet)
+
+
+class FuzzyCountModelAdmin(FuzzyCountModelAdminMixin, admin.ModelAdmin):
+    pass
