@@ -20,7 +20,9 @@ class FuzzyCountQuerySet(QuerySet):
         """Override QuerySet.count to approximate count in some situations."""
 
         # If there are results already, return the result cache count
-        if self._result_cache is not None and not self._iter:
+        # NOTE: there is no self._iter in Django 1.6+, so we use getattr() for
+        # compatibility
+        if self._result_cache is not None and not getattr(self, '_iter', None):
             return len(self._result_cache)
 
         mysql_engines = ("mysql", )
