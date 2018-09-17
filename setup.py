@@ -17,7 +17,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name="django-mysql-fuzzycount",
-    version="0.3",
+    version="0.4",
     description="Approximate query counts for MySQL and Django.",
     license="MIT",
     keywords="mysql orm django",
