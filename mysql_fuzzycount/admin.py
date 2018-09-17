@@ -5,8 +5,8 @@ from mysql_fuzzycount.queryset import FuzzyCountQuerySet
 
 class FuzzyCountModelAdminMixin(object):
 
-    def queryset(self, request):
-        qs = super(FuzzyCountModelAdminMixin, self).queryset(request)
+    def get_queryset(self, request):
+        qs = super(FuzzyCountModelAdminMixin, self).get_queryset(request)
         return qs._clone(klass=FuzzyCountQuerySet)
 
 
