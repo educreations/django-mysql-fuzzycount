@@ -28,7 +28,7 @@ setup(
     packages=["mysql_fuzzycount"],
     package_dir={"mysql_fuzzycount": "mysql_fuzzycount"},
     install_requires=[
-        "django >= 1.5",
+        "django >= 1.6",
         "django-model-utils >= 1.4.0",
     ],
     classifiers=[
